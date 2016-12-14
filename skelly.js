@@ -10,7 +10,7 @@ function Skelly(x,y)
         this.element.style.width = "30px";
         this.element.style.padding = "10px";
         
-        hp = 2;
+        this.hp = 2;
 
         this.addMouseDown(this.element, this);
     
@@ -24,10 +24,17 @@ function Skelly(x,y)
 
     this.mouseDown = function()
     {
+        
         this.element.style.opacity = .5;
-        if (hp<=0) action.innerHTML = "You killed the Skelly";
-        else action.innerHTML = "Attacked Skelly " + hp + "/2";
-        hp -= 1;
+        if (this.hp<=1) action.innerHTML = "You killed the Skelly";
+        else
+        {
+            this.hp -= 1;
+            action.innerHTML = "Attacked Skelly Hp:" + this.hp + "/2";
+            player.php -= 1;
+            player.Update();
+        }
+        
         
     }
     

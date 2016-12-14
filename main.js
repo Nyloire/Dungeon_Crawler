@@ -2,6 +2,7 @@ main = document.getElementById("main");
 
 torch1 = new Torch();
 skelly1 = new  Skelly();
+door0 = new Door();
 room0 = new Room();
 player = new Player();
 

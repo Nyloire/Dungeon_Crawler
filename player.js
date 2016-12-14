@@ -1,8 +1,14 @@
-function Player(hp)
+function Player()
 {
-    hp = 2;
-    this.element = document.createElement("div");
-    this.element.innerHTML = "hp: " + hp + "/10";
+    this.php = 10;
     
+    this.element = document.createElement("div");
+    
+    this.Update = function()
+    {
+        this.element.innerHTML = "Hp: " + this.php + "/10";
+    }
+    
+    this.Update();
     main.appendChild(this.element);
 }
