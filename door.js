@@ -22,7 +22,9 @@ function Door(x,y)
     this.mouseDown = function()
     {
         this.element.style.opacity = .5;
-        action.innerHTML = "The door is locked";
+        //action.innerHTML = "The door is locked";
+        room0 = new Room("water flows in streams across the floor", Skelly, Skelly, Door);
+        this.element.removeChild(element);
     }
     
     

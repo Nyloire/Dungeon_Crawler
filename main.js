@@ -1,9 +1,6 @@
 main = document.getElementById("main");
 
-torch1 = new Torch();
-skelly1 = new  Skelly();
-door0 = new Door();
-room0 = new Room();
+room0 = new Room("it's dark",Torch, Skelly, Door);
 player = new Player();
 
 
